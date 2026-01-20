@@ -5,7 +5,7 @@
 ## 🌐 Live Demo
 
 👉 **Live Website:**
-🚀 Live Demo: [Click Here to salinder-delicious-pizza-cafe the Site](https://salinder0133.github.io/salinder-delicious-pizza-cafe/)
+🚀 Live Demo: [Click Here to salinder-delicious-pizza-cafe the Site](https://salinder0133.github.io/Salinder-Delicious-Pizza-Cafe/)
 
 *(Replace this link with your actual GitHub Pages / Netlify / Vercel URL)*
 
