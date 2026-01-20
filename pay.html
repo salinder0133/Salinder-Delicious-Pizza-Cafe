@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Card Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      gap: 40px;
+      max-width: 900px;
+    }
+
+    .card-preview {
+      background: linear-gradient(to bottom right, #434343, #000000);
+      color: white;
+      padding: 25px;
+      width: 380px;
+      height: 220px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .chip {
+      width: 50px;
+      height: 35px;
+      background: gold;
+      border-radius: 8px;
+    }
+
+    .card-number {
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    .card-details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .form {
+      width: 320px;
+    }
+
+    .form h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #f77f00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /*mobile-friendly*/
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card-preview,
+      .form {
+        width: 100%;
+        max-width: 90%;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card-preview">
+      <div class="chip"></div>
+      <div class="card-number" id="card-number-display">#### #### #### ####</div>
+      <div class="card-details">
+        <div>
+          <div>Card Holder</div>
+          <div id="card-name-display">YOUR NAME</div>
+        </div>
+        <div>
+          <div>Expires</div>
+          <div id="card-expiry-display">MM/YY</div>
+        </div>
+      </div>
+    </div>
+
+    <form class="form" onsubmit="handleSubmit(event)">
+      <h2>Enter Card Details</h2>
+      <div class="form-group">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+      </div>
+      <div class="form-group">
+        <label for="card-name">Card Holder Name</label>
+        <input type="text" id="card-name" placeholder="Card name" required>
+      </div>
+      <div class="form-group">
+        <label for="card-expiry">Expiry Date</label>
+        <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5" required>
+      </div>
+      <div class="form-group">
+        <label for="card-cvv">CVV</label>
+        <input type="password" id="card-cvv" placeholder="*" maxlength="4" required>
+      </div>
+      <button type="submit" id="payButton">Pay</button>
+
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const price = localStorage.getItem("pizza_total_price") || "₹0.00";
+      document.getElementById("payButton").innerText = `Pay ${price}`;
+    });
+
+    document.getElementById("card-number").addEventListener("input", e => {
+      const raw = e.target.value.replace(/\D/g, "").substring(0, 16);
+      e.target.value = raw.replace(/(.{4})/g, "$1 ").trim();
+      document.getElementById("card-number-display").innerText = e.target.value || "#### #### #### ####";
+    });
+
+    document.getElementById("card-name").addEventListener("input", e => {
+      document.getElementById("card-name-display").innerText = e.target.value.toUpperCase() || "YOUR NAME";
+    });
+
+    document.getElementById("card-expiry").addEventListener("input", e => {
+      const raw = e.target.value.replace(/\D/g, "").substring(0, 4);
+      e.target.value = raw.length > 2 ? `${raw.slice(0, 2)}/${raw.slice(2)}` : raw;
+      document.getElementById("card-expiry-display").innerText = e.target.value || "MM/YY";
+    });
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("🎉 Payment Successful!");
+      localStorage.clear();
+      window.location.href = "home.html";
+    }
+  </script>
+</body>
+
+</html>

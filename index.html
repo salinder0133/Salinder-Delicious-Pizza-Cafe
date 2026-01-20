@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salinder Delicious Pizza Cafe</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+
+    <img src="photo/logo/logo.jpg" alt="ANPI Logo" style="height:80px;">
+
+    <h1>Salinder Delicious Pizza Cafe</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg hero-bg1"></div>
+    <div class="hero-bg hero-bg2"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-container">
+      <h2>Freshly Baked, <span id="changingWords">Hot and Delicious</span></h2>
+      <p>Experience the best pizza in town with fresh ingredients and a crispy crust!</p>
+      <a href="order.html"><button class="hero-btn">Order Now</button></a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>🧀Fresh Ingredients</h3>
+        <p>We use only the freshest vegetables and the finest cheese for our pizzas.</p>
+      </div>
+      <div class="card">
+        <h3>🚚Fast Delivery</h3>
+        <p>Hot and fresh pizzas delivered to your doorstep in no time.</p>
+      </div>
+      <div class="card">
+        <h3>🍕Customizable Options</h3>
+        <p>Choose your toppings and create your perfect pizza just the way you like it!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Feedback Section -->
+  <section class="feedback">
+    <h2>Customer Feedback</h2>
+
+    <!-- Existing feedback cards -->
+    <div class="feature-cards" id="feedbackCards">
+
+      <!-- Locked/featured feedback -->
+      <div class="card locked">
+        <h3>⭐️⭐️⭐️⭐️⭐️</h3>
+        <p>"This is our featured review! Loved the service and pizza quality."</p>
+        <h4>- Featured Customer</h4>
+        <button class="delete-btn">Delete</button>
+      </div>
+
+      <div class="card">
+        <h3>⭐️⭐️⭐️⭐️⭐️</h3>
+        <p>"The pizza was absolutely delicious! The crust was crispy, and the cheese melted perfectly."</p>
+        <h4>- Rohan Sharma</h4>
+        <button class="delete-btn">Delete</button>
+      </div>
+      <div class="card">
+        <h3>⭐️⭐️⭐️⭐️⭐️</h3>
+        <p>"Super fast delivery and the pizza arrived hot! The toppings were fresh and flavorful."</p>
+        <h4>- Neha Verma</h4>
+        <button class="delete-btn">Delete</button>
+      </div>
+
+    </div>
+
+    <!-- Feedback Form -->
+    <div class="feedback-form">
+      <h3>Share Your Experience</h3>
+      <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Your Name" required><br><br>
+
+        <div class="star-rating">
+          <span class="star" data-value="5">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="1">★</span>
+        </div><br>
+
+        <textarea id="message" rows="4" placeholder="Write your feedback..." required></textarea><br><br>
+
+        <button type="submit" class="hero-btn">Submit Feedback</button>
+      </form>
+      <p id="feedbackMsg" style="margin-top:15px; color:green; font-weight:bold;"></p>
+    </div>
+  </section>
+
+  <!-- Offers Section -->
+  <section class="offers" style="background-color:#ecf0f1; padding:60px 15px; text-align:center;">
+    <h2>Special Offers</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>🎉 Buy 1 Get 1 Free</h3>
+        <p>Order any large pizza and get another absolutely free! Perfect for sharing with friends.</p>
+      </div>
+      <div class="card">
+        <h3>🔥 20% Off on First Order</h3>
+        <p>New customers enjoy 20% discount on their first online order. Don’t miss out!</p>
+      </div>
+      <div class="card">
+        <h3>🍕 Family Combo Deal</h3>
+        <p>2 medium pizzas + garlic bread + 1.5L cold drink — all at just ₹599.</p>
+      </div>
+    </div>
+    
+  </section>
+
+
+  <!-- Menu -->
+  <section class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="photo/Margherita Pizza.jpeg" alt="Margherita Pizza" loading="eager" />
+        <h3>Margherita Pizza</h3>
+        <p>A classic pizza topped with fresh mozzarella and basil.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="photo/Pepperoni.jpeg" alt="Pepperoni Pizza" loading="eager">
+        <h3>Pepperoni Pizza</h3>
+        <p>Loaded with pepperoni and melted cheese, a customer favorite!</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="photo/Veggie Pizza.jpeg" alt="Veggie Pizza" loading="eager">
+        <h3>Veggie Pizza</h3>
+        <p>For the veggie lovers, topped with fresh vegetables and cheese.</p>
+      </div>
+
+      <!-- New Menu Items -->
+      <div class="menu-item">
+        <img src="photo/BBQ Chicken.jpg" alt="BBQ Chicken Pizza" loading="eager">
+        <h3>BBQ Chicken Pizza</h3>
+        <p>Smoky BBQ sauce with tender chicken pieces and melted cheese.</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="photo/Cheese Burst Pizza.jpeg" alt="Cheese Burst Pizza" loading="eager">
+        <h3>Cheese Burst Pizza</h3>
+        <p>Oozing with molten cheese inside the crust — a dream for cheese lovers!</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="photo/Mexican Pizza.jpeg" alt="Mexican Pizza" loading="eager">
+        <h3>Mexican Pizza</h3>
+        <p>Spicy and flavorful with jalapeños, corn, beans, and tangy sauce.</p>
+      </div>
+    </div>
+
+    <a href="menu.html"><button class="hero-btn">See Full Menu</button></a>
+  </section>
+
+
+  
+  <section class="location"
+    style="padding:60px 15px; text-align:center; background:linear-gradient(180deg,#ecf0f1 0%,#f8f9fa 100%);">
+    <h2 style="color:#b5212e; font-size:2.5rem; margin-bottom:20px;">Find Us</h2>
+    <p style="font-size:1.1rem; margin-bottom:30px;">We’d love to welcome you at our café! Drop by for a hot slice or
+      order online.</p>
+
+    <div class="map-box"
+      style="background:#fff; border-radius:12px; box-shadow:0 8px 25px rgba(0,0,0,0.15); padding:20px; max-width:900px; margin:auto;">
+      <div style="margin-bottom:15px; line-height:1.8;">
+        <p>📍 <strong>Address:</strong> 123 Pizza Street, Delicious Town, India</p>
+        <p>📞 <strong>Phone:</strong> +91 98765 43210</p>
+        <p>✉️ <strong>Email:</strong> info@salinderpizza.com</p>
+        <p>🕒 <strong>Timing:</strong> 10:00 AM – 9:00 PM</p>
+
+        <!-- Open/Closed Status -->
+        <p id="openStatus"
+          style="font-weight:bold; font-size:1.2rem; margin-top:8px; padding:6px 10px; border-radius:8px; display:inline-block;">
+        </p>
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="350"
+        style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+
+      <a href="https://www.google.com/maps?q=Salinder+Delicious+Pizza+Cafe" target="_blank">
+        <button class="hero-btn" style="margin-top:20px;">Get Directions</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+<section class="menu" id="gallery" style="background-color: #fff;">
+    <h2 style="color: var(--dark);">Our Gallery</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <img src="photo/gallery/img1.jpeg" alt="Gallery Image 1">
+            
+        </div>
+        <div class="menu-item">
+            <img src="photo/gallery/img2.jpeg" alt="Gallery Image 2">
+            
+        </div>
+        <div class="menu-item">
+            <img src="photo/gallery/img3.jpeg" alt="Gallery Image 3">
+            
+        </div>
+        <div class="menu-item">
+            <img src="photo/gallery/img4.jpeg" alt="Gallery Image 4">
+          
+        </div>
+        <div class="menu-item">
+            <img src="photo/gallery/img5.jpeg" alt="Gallery Image 4">
+          
+        </div>
+        <div class="menu-item">
+            <img src="photo/gallery/img6.jpeg" alt="Gallery Image 4">
+          
+        </div>
+        <!-- Add more items as needed -->
+    </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="photo/logo/logo.jpg">
+        <p>© 2025 Salinder Delicious Pizza Cafe. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@salinderpizza.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: 123 Pizza Street, Delicious Town, India</p>
+      </div>
+    </div>
+
+
+  </footer>
+
+
+ 
+  <script>
+     //time
+     
+    const now = new Date();
+
+    const istOffset = 5.5 * 60; // IST = UTC +5:30
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const istTime = new Date(utc + (istOffset * 60000));
+    const istHour = istTime.getHours();
+
+    const status = document.getElementById("openStatus");
+
+    if (istHour >= 10 && istHour < 21) { // 10 AM to 9 PM
+      status.textContent = "🟢 We’re Open Now!";
+      status.style.color = "green";
+    } else {
+      status.textContent = "🔴 Closed - Opens at 10:00 AM";
+      status.style.color = "red";
+    }
+
+    //photo backgroud
+    const images = [
+      'photo/backgp/backgp.jpg',
+      'photo/backgp/backgp1.jpg',
+      'photo/backgp/backgrp.jpg'
+    ];
+
+    images.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    const bg1 = document.querySelector('.hero-bg1');
+    const bg2 = document.querySelector('.hero-bg2');
+
+    let currentIndex = 0;
+    let showingFirst = true;
+
+    bg1.style.backgroundImage = `url('${images[currentIndex]}')`;
+    bg1.classList.add('visible');
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      if (showingFirst) {
+        bg2.style.backgroundImage = `url('${images[currentIndex]}')`;
+        bg2.classList.add('visible');
+        bg1.classList.remove('visible');
+      } else {
+        bg1.style.backgroundImage = `url('${images[currentIndex]}')`;
+        bg1.classList.add('visible');
+        bg2.classList.remove('visible');
+      }
+      showingFirst = !showingFirst;
+    }, 4000);
+
+    //feedback
+    const stars = document.querySelectorAll('.star');
+    const feedbackForm = document.getElementById('feedbackForm');
+    const feedbackMsg = document.getElementById('feedbackMsg');
+    const feedbackCards = document.getElementById('feedbackCards');
+    let selectedRating = 0;
+
+    // Load feedback from localStorage
+    const savedFeedback = JSON.parse(localStorage.getItem('feedbackList')) || [];
+    savedFeedback.forEach(fb => addFeedbackCard(fb.name, fb.message, fb.rating));
+
+    // Star click handling (left to right)
+    stars.forEach((star, index) => {
+      star.addEventListener('click', () => {
+        selectedRating = index + 1;
+        stars.forEach(s => s.classList.remove('selected'));
+        for (let i = 0; i <= index; i++) {
+          stars[i].classList.add('selected');
+        }
+      });
+    });
+
+    // Form submit handling
+    feedbackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (selectedRating === 0) {
+        alert("Please select a star rating!");
+        return;
+      }
+
+      if (name && message) {
+        addFeedbackCard(name, message, selectedRating);
+
+        // Save to localStorage
+        savedFeedback.push({ name, message, rating: selectedRating });
+        localStorage.setItem('feedbackList', JSON.stringify(savedFeedback));
+
+        // Reset form and stars
+        feedbackForm.reset();
+        stars.forEach(s => s.classList.remove('selected'));
+        selectedRating = 0;
+
+        feedbackMsg.textContent = "Thank you for your feedback!";
+        setTimeout(() => feedbackMsg.textContent = "", 3000);
+      }
+    });
+
+    // Function to create and append a feedback card
+    function addFeedbackCard(name, message, rating) {
+      const card = document.createElement('div');
+      card.className = 'card';
+      let starsText = '⭐️'.repeat(rating);
+      card.innerHTML = `
+    <h3>${starsText}</h3>
+    <p>"${message}"</p>
+    <h4>- ${name}</h4>
+    <button class="delete-btn">Delete</button>
+  `;
+
+      // Delete button functionality
+      const deleteBtn = card.querySelector('.delete-btn');
+      deleteBtn.addEventListener('click', () => {
+        card.remove();
+
+        // Remove from localStorage
+        const index = savedFeedback.findIndex(fb => fb.name === name && fb.message === message && fb.rating === rating);
+        if (index > -1) {
+          savedFeedback.splice(index, 1);
+          localStorage.setItem('feedbackList', JSON.stringify(savedFeedback));
+        }
+      });
+
+      feedbackCards.appendChild(card);
+    }
+
+    // Existing delete buttons (if any, like from HTML)
+    document.querySelectorAll('.delete-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const parentCard = e.target.parentElement;
+        parentCard.remove();
+      });
+    });
+
+
+    //chngingwords
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      if (showingFirst) {
+        bg2.style.backgroundImage = `url('${images[currentIndex]}')`;
+        bg2.classList.add('visible');
+        bg1.classList.remove('visible');
+      } else {
+        bg1.style.backgroundImage = `url('${images[currentIndex]}')`;
+        bg1.classList.add('visible');
+        bg2.classList.remove('visible');
+      }
+      showingFirst = !showingFirst;
+    }, 4000);
+
+    // Dynamic changing words in hero section (smooth fade)
+    const changingWords = document.getElementById('changingWords');
+    const words = [
+      "Hot and Delicious",
+      "Crispy and Cheesy",
+      "Soft and Tasty",
+      "Spicy and Savory",
+      "Fresh and Flavorful"
+    ];
+    let wordIndex = 0;
+
+    function changeWord() {
+      // Fade out
+      changingWords.style.opacity = 0;
+      changingWords.style.transform = "translateY(10px)";
+
+      setTimeout(() => {
+        // Change text after fade-out
+        wordIndex = (wordIndex + 1) % words.length;
+        changingWords.textContent = words[wordIndex];
+        // Fade in
+        changingWords.style.opacity = 1;
+        changingWords.style.transform = "translateY(0)";
+      }, 700); // delay matches fade duration
+    }
+
+    // Start animation
+    setInterval(changeWord, 3000);
+
+  </script>
+
+</body>
+
+</html>

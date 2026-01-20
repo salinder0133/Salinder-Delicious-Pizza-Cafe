@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Menu </title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff8f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        nav {
+            background-color: #b5212e;
+            padding: 12px 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .logo-img {
+            margin: -20px 13px;
+            padding: 15px;
+            float: left;
+            height: 35px;
+            border-radius: 45px;
+        }
+
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #b5212e;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .pizza-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .pizza-card {
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            background-color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pizza-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .pizza-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .pizza-card h3 {
+            margin: 10px 0 5px;
+            padding: 5px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .pizza-card p {
+            margin: 5px 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .pizza-card .price {
+            font-weight: bold;
+            margin-top: 5px;
+            color: #0d1b2a;
+        }
+
+        .pizza-card .rating {
+            margin-top: 5px;
+            color: #ffcc00;
+        }
+
+        .order-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 30px;
+            font-size: 17px;
+            background-color: #0d1b2a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            width: max-content;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        .order-btn:hover {
+            background-color: #ffcc00;
+            color: #0d1b2a;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 8px 5px;
+            }
+
+            img.logo-img {
+                height: 25px;
+                margin: -10px 3px;
+            }
+
+            nav a {
+                margin: 0 2px;
+                padding: 5px 5px;
+                font-size: 13px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 15px;
+                margin: 20px auto;
+            }
+
+            .pizza-card {
+                width: 90%;
+            }
+
+            .order-btn {
+                font-size: 16px;
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="photo/logo/logo.jpg" alt="ANPI Logo" class="logo-img"> <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Now</a>
+        <a href="about.html">About Us</a>
+        <a href="home.html#gallery">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>🍕 Our Menu</h1>
+
+        <div class="pizza-grid" id="pizzaGrid">
+        </div>
+
+        <a href="order.html" class="order-btn">Order Now</a>
+    </div>
+
+    <script>
+
+        const pizzas = [
+            { name: "Margherita", img: "photo/order/margherita.jpg", price: 150, desc: "Classic delight with mozzarella & basil", rating: 4.8 },
+            { name: "Pepperoni", img: "photo/order/pepperoni.jpg", price: 200, desc: "Loaded with pepperoni & cheese", rating: 4.9 },
+            { name: "Veggie Delight", img: "photo/order/Veggie Delight.jpg", price: 180, desc: "Topped with fresh veggies and cheese", rating: 4.6 },
+            { name: "BBQ Chicken", img: "photo/order/BBQ Chicken.jpg", price: 220, desc: "Smoky BBQ chicken and onions", rating: 4.7 },
+            { name: "Four Cheese", img: "photo/order/Four Cheese.jpg", price: 210, desc: "Blend of mozzarella, cheddar, feta & parmesan", rating: 4.8 },
+            { name: "Hawaiian", img: "photo/order/hawaiian.jpg", price: 190, desc: "Sweet pineapple & ham combo", rating: 4.5 },
+            { name: "Paneer Tikka", img: "photo/order/Paneer Tikka.jpg", price: 240, desc: "Spicy Indian paneer flavor", rating: 4.9 },
+            { name: "Mexican", img: "photo/order/Mexican.jpg", price: 230, desc: "Zesty peppers and Mexican herbs", rating: 4.7 },
+        ];
+
+        const pizzaGrid = document.getElementById('pizzaGrid');
+
+        pizzas.forEach(pizza => {
+            const card = document.createElement('div');
+            card.className = 'pizza-card';
+
+            // --- ONLY STAR + RATING ---
+            const starRating = `⭐ ${pizza.rating}`;
+
+            card.innerHTML = `
+        <img src="${pizza.img}" alt="${pizza.name} Pizza" />
+        <h3>${pizza.name}</h3>
+        <p class="desc">${pizza.desc}</p>
+        <p class="rating">${starRating}</p>
+        <p class="price-tag">Price: ₹${pizza.price}</p>
+    `;
+
+            pizzaGrid.appendChild(card);
+        });
+
+
+    </script>
+</body>
+
+</html>

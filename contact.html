@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff8f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        nav {
+            background-color: #b5212e;
+            padding: 12px 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Global img styles remain for potential logo */
+        img {
+            margin: -19px 13px;
+            padding: 15px;
+            float: left;
+            height: 35px;
+            border-radius: 45px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading - Theme Primary Color: #b5212e */
+        h1 {
+            text-align: center;
+            color: #b5212e;
+            /* Updated from #d33f00 */
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 6px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Button Styling - Theme Dark Color: #0d1b2a */
+        button {
+            background-color: #0d1b2a;
+            /* Updated from #d33f00 to match var(--dark) */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            /* Added all button transitions for consistency */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        /* Button Hover - Theme Accent Color: #ffcc00 */
+        button:hover {
+            background-color: #ffcc00;
+            /* Updated from #a52a00 to match var(--accent) */
+            color: #0d1b2a;
+            /* Added to match var(--dark) color on hover */
+            transform: scale(1.02);
+            /* Applied slight scale for animation consistency */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* Added box-shadow for consistency */
+        }
+
+        /* ✅ Responsive Design */
+       /* ✅ Responsive Design */
+@media (max-width: 600px) {
+    nav {
+        flex-wrap: wrap;       /* Agar bahut chhota screen to wrap */
+        justify-content: center;
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 2px 4px;
+    }
+
+    nav img {
+        height: 30px;
+        margin-bottom: 1cm;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="photo/logo/logo.jpg" alt="ANPI Logo">
+        <a href="home.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order Now</a>
+        <a href="about.html">About Us</a>
+        <a href="home.html#gallery">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>📞 Contact Us</h1>
+        <form id="form-contact">
+            <label>Your Name</label>
+            <input type="text" name="name" required />
+
+            <label>Email Address</label>
+            <input type="email" name="email" required />
+
+            <label>Message</label>
+            <textarea name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div id="success-message"
+            style="display:none; text-align:center; padding:20px; color: #155724; background-color: #d4edda; border-radius: 5px;">
+            <h3>✅ Thank You!</h3>
+            <p>Your message has been successfully sent.</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('form-contact').addEventListener('submit', function (event) {
+            event.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
